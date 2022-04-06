@@ -4,4 +4,4 @@ para correr pruebas unitarias, ejecutar:
 
 make test
 
-./bin/tests
+./bin/tests o  bin/tests
