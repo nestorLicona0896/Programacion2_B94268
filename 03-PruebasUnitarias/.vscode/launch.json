@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "g++ - Debug tests",
+            "name": "g++ - Debug program",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/bin/calculadora",
@@ -28,7 +28,7 @@
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "preLaunchTask": "Compile the program"
+            "preLaunchTask": "Compile the tests"
            
         }
         
