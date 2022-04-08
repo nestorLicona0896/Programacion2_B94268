@@ -4,8 +4,9 @@
 #include <string>
 
 // la clase empleado es una clase abstracta que puede heredar sus metodos mediante sobrecargas a otras clases
+using namespace std;
 
-class Empleado() {
+class Empleado {
     // la clausula deja que los atributos seana ccesibles para las clases herederas
     protected:
         string nombre;
