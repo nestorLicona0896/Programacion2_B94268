@@ -18,3 +18,5 @@ class Empleado {
 };
 
 #endif
+
+//LA CLASE ABSTRACTA NO POSEE CONSTRUCTOR
