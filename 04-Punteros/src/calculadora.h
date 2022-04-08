@@ -6,6 +6,7 @@ class Calculadora
     public:
 
         int sumar (int valor1, int valor2);
+        int restar (int valor1, int valor2);
 };
 
 #endif
