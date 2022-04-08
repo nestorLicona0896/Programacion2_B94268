@@ -3,14 +3,9 @@
 
 class Calculadora
 {
-
-
     public:
 
         int sumar (int valor1, int valor2);
-
-
-
 };
 
 #endif
