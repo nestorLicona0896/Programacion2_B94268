@@ -1,12 +1,6 @@
 #ifndef NODO_H
 #define NODO_H
 
-using namespace std;
-
-// la clase nodo representa una clase recursiva, se reutiliza y representa un espacio de 
-//memoria especifico que puede almacenar informacion de tipo especifico, y puede enlazarse 
-// a otro nodo para formar una lista, se utiliza con punteros para una mayor eficiencia a 
-// la hora de leer y ecribir los datos
 
 class Nodo {
 
@@ -16,12 +10,13 @@ class Nodo {
 
     public:
        
-        Nodo(int valorNuevo);
+        Nodo (int valorNuevo);
        
-        ~Nodo();
+        ~Nodo ();
 
-        void AsignarPunteroSiguiente(Nodo* punteroaAlSiguiente);
-        Nodo* ObtenerPunteroAlSiguiente();      
+        void AsignarPunteroSiguiente (Nodo* punteroaAlSiguiente);
+        Nodo* ObtenerPunteroAlSiguiente ();  
+        int getValor ();  
 };
 
 #endif

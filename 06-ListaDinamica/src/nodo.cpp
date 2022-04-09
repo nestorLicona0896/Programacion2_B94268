@@ -5,12 +5,16 @@ Nodo::Nodo(int nuevoValor){
     this->siguiente = nullptr;
 }
 
-Nodo::~Nodo(){}
+Nodo::~Nodo (){}
 
-void Nodo::AsignarPunteroSiguiente(Nodo* punteroAlSiguiente){
+void Nodo::AsignarPunteroSiguiente (Nodo* punteroAlSiguiente) {
     this->siguiente = punteroAlSiguiente;
 }
 
-Nodo* Nodo::ObtenerPunteroAlSiguiente(){
+Nodo* Nodo::ObtenerPunteroAlSiguiente () {
     return this->siguiente;
+}
+
+int Nodo::getValor () {
+    return this->valor;
 }
