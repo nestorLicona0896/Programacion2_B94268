@@ -5,6 +5,7 @@ using namespace std;
 Fedex::Fedex (float peso, float distancia) {
     this->peso = peso;
     this->distancia = distancia;
+    this->base = 35; 
 }
 
 Fedex::~Fedex () {
