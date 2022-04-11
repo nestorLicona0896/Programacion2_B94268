@@ -3,12 +3,12 @@
 
 class Envio {           
     protected:
-        double peso;
-        double distancia;
+        float peso;
+        float distancia;
 
     public:
 
-        virtual double CalculoCosto() = 0;
+        virtual float CalculoCosto() = 0;
     
 };
 
