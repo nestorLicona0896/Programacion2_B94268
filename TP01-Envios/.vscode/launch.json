@@ -11,7 +11,7 @@
             "program": "${workspaceFolder}/bin/envios",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${filename}",
+            "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "lldb",

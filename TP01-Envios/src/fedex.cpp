@@ -13,5 +13,13 @@ Fedex::~Fedex () {
 }
 
 float Fedex::CalculoCosto () {
-    return 0;
+    float costo = 0;
+    costo += this->base;    
+    if(distancia > 500) {
+        costo += 15;
+    }
+    if (peso > 10) {
+        costo += 10;
+    }
+    return costo;
 }
