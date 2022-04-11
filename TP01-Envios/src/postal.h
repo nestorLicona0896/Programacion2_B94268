@@ -1,7 +1,7 @@
-#ifndef ENVIO_H
-#define ENVIO_H
+#ifndef POSTAL_H
+#define POSTAL_H
 
-class Envio {
+class Postal {
 
     
 };
