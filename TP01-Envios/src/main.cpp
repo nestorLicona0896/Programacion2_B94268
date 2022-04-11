@@ -30,6 +30,13 @@ int main() {
         cout  << "costo del envio: " << envio->CalculoCosto() << endl;    
     }
 
+    delete envioPostal1;
+    delete envioPostal2;
+    delete envioPostal3;
+
+    delete envioFedex1;
+    delete envioFedex2;
+    delete envioFedex3;
 
     return 0;
 }
