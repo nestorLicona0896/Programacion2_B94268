@@ -7,15 +7,17 @@ using namespace std;
 
 // la clase empleado es una clase abstracta que puede heredar sus metodos mediante sobrecargas a otras clases
 
-class EmpleadoPorHora : public Empleado {
+class EmpleadoPorHoras : public Empleado {
     
-    float salarioPorHora;
+    float costoPorHora;
+    int horasEnMes;
 
     public:
         //metodo constructor
-        EmpleadoPorHora(float salario, string nombre);
-
-        virtual float CalculoSalario(); 
+        EmpleadoPorHoras(float costoPorHora, int horasEnMes, string nombre);
+        virtual string ObtenerNombre();                
+        int ObtenerHorasEnMes();
+        virtual float CalculoPago(); 
 
 };
 

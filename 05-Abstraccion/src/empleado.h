@@ -7,16 +7,16 @@
 using namespace std;
 
 class Empleado {
-    // la clausula deja que los atributos seana ccesibles para las clases herederas
+    // la clausula deja que los atributos sean accesibles para las clases herederas
     protected:
-        string nombre;
+    string nombre;
 
     public:
-        // método abstracto
-        virtual float CalculoSalario () = 0;
-
+    // método abstracto
+    virtual float CalculoPago() = 0;
+    virtual string ObtenerNombre();
 };
 
 #endif
 
-//LA CLASE ABSTRACTA NO POSEE CONSTRUCTOR
+// LA CLASE ABSTRACTA NO POSEE CONSTRUCTOR

@@ -11,10 +11,10 @@
             "program": "${workspaceFolder}/bin/abstraccion",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${filename}",
+            "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": false,
-            "MIMode": "lldb",
+            "MIMode": "gdb",
             "preLaunchTask": "Compile the program"        
         }
     ]

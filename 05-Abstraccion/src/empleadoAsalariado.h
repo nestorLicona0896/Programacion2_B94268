@@ -15,8 +15,7 @@ class EmpleadoAsalariado : public Empleado {
         //metodo constructor
         EmpleadoAsalariado(float salarioMensual, string nombre);
 
-        virtual float CalculoSalario(); 
-
+        virtual float CalculoPago(); 
 };
 
 #endif
