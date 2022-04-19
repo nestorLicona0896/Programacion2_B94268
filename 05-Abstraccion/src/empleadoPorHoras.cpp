@@ -8,6 +8,10 @@ EmpleadoPorHoras::EmpleadoPorHoras(float costoPorHora, int horasEnMes, string no
     this->nombre = nombre;
 }
 
+float EmpleadoPorHoras::CalculoPago(){
+    return this->costoPorHora * this->ObtenerHorasEnMes();
+}
+
 
 string EmpleadoPorHoras::ObtenerNombre() {
     return "Empleado por horas: " + this->nombre;
@@ -18,6 +22,3 @@ int EmpleadoPorHoras::ObtenerHorasEnMes(){
     return this->horasEnMes;
 }
 
-float EmpleadoPorHoras::CalculoPago(){
-    return this->costoPorHora * this->ObtenerHorasEnMes();
-}

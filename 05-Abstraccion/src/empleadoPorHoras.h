@@ -15,9 +15,11 @@ class EmpleadoPorHoras : public Empleado {
     public:
         //metodo constructor
         EmpleadoPorHoras(float costoPorHora, int horasEnMes, string nombre);
+        
+        virtual float CalculoPago(); 
         virtual string ObtenerNombre();                
         int ObtenerHorasEnMes();
-        virtual float CalculoPago(); 
+        
 
 };
 
