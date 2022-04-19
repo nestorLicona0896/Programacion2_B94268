@@ -16,6 +16,8 @@ class EmpleadoAsalariado : public Empleado {
         EmpleadoAsalariado(float salarioMensual, string nombre);
 
         virtual float CalculoPago(); 
+        virtual string ObtenerNombre();
+        float ObtenerSalarioMensual();
 };
 
 #endif

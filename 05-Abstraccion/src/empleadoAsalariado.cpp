@@ -15,5 +15,13 @@ EmpleadoAsalariado::EmpleadoAsalariado(float salarioMensual, string nombre)
 // sobrecarga del metodo constructor:
 float EmpleadoAsalariado::CalculoPago()
 {
-    return salarioMensual;
+    return this->ObtenerSalarioMensual();
+}
+
+string EmpleadoAsalariado::ObtenerNombre () {
+    return "Empleado aslariado: " + this->nombre;
+}
+
+float EmpleadoAsalariado::ObtenerSalarioMensual(){
+    return this->salarioMensual;
 }

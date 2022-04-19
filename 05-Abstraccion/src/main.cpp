@@ -12,8 +12,8 @@ using namespace std;
 int main () {
 
     // generacion de 2 instancias de tipo Empleado mediante sus clases herederas
-    EmpleadoAsalariado* empleadoAsalariado1 = new EmpleadoAsalariado(3500,"Emilio");
-    EmpleadoPorHoras* empleadoPorHoras1 = new EmpleadoPorHoras(600,56,"Beñat");
+    EmpleadoAsalariado* empleadoAsalariado1 = new EmpleadoAsalariado(3500, "Emilio");
+    EmpleadoPorHoras* empleadoPorHoras1 = new EmpleadoPorHoras(50, 56, "Beñat");
 
     // creacion de un vector de tipo Empleado:
     vector<Empleado*> vectorEmpleados;
@@ -24,8 +24,8 @@ int main () {
 
     // recorrer el vector con un puntero y mostrar el resultado de la funcion calculoSalario
     for(Empleado* empleado: vectorEmpleados ){
-        //cout << empleado->ObtenerNombre() << endl; 
-        cout  << "salario reportado: " << empleado->CalculoPago() << endl;    
+        cout << empleado->ObtenerNombre() << endl 
+        << "salario reportado: " << empleado->CalculoPago() << endl << endl;    
     }
 
     // liberacion de la memoria heap:
