@@ -6,7 +6,7 @@ class Calculadora {
 
         int Suma (int mum1, int num2);
         float Suma (float num1, float num2);
-        int OperacionEspecial(int num);
+        int OperacionEspecial(int numero);
 
 };
 
