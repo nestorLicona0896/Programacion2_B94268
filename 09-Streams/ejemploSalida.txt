@@ -1,0 +1,2 @@
+Número de palabras: 4
+segunda línea: 4
