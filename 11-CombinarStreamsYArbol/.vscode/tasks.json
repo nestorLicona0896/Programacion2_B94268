@@ -12,6 +12,16 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "Compile the tests",
+            "type": "shell",
+            "command": "make test",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
         }
     ]
 }

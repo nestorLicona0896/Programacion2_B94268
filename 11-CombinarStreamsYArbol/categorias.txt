@@ -1,0 +1,5 @@
+1 Alimentos 0
+2 Limpieza 0
+3 Pasta 1
+4 Atun 1
+5 Desinfectante 2
