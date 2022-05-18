@@ -11,8 +11,8 @@ class Arbol {
 
     public:
 
-    Arbol(int valorRaiz, Nodo *nuevaRaiz);
-
+    Arbol(int valorRaizNueva, int idRaizNueva);
+    ~Arbol();
     void AgragarNodo(int valorNuevo, int idNuevo, int idPadre);
     int ObtenerValor(int id);
 };
