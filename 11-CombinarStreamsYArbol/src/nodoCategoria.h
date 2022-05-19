@@ -5,7 +5,7 @@
 #include <iostream>
 #include <vector>
 
-//#include "nodoArticulo.h"
+#include "nodoArticulo.h"
 
 using namespace std;
 
@@ -15,7 +15,7 @@ class NodoCategoria
     int idCategoria;
     string nombreCategoria;
     int idSuperCategoria;
-    //vector <NodoArticulo*> articulos;
+    vector <NodoArticulo*> articulos;
 
     public:
         NodoCategoria();
