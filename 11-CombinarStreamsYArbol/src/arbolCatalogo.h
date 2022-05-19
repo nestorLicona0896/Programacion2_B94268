@@ -11,14 +11,14 @@ using namespace std;
 class ArbolCatalogo {
     
     vector <NodoCategoria*> categorias;
-    map<NodoCategoria, NodoArticulo*> articulosCategorizados;
+    map<int , NodoArticulo*> articulosCategorizados; // int idCategoriaArticulo
 
     public:
         ArbolCatalogo();
         ~ArbolCatalogo();
 
         void AgregarCategoria(NodoCategoria *categoriaNueva);
-        void AgregarArticulo(int idArticuloNuevo, string nombreArticuloNuevo, int idCategoriaArticuloNuevo);
+        void AgregarArticulo(int idArticuloNuevo, string nombreArticuloNuevo, int idCategoriaNuevo);
 
         // sobrecargas a los operadores para a la hora de añadir una catalogo apartir de informacion proveniente de datos stream
         friend istream& operator >> (istream &i, ArbolCatalogo *catalogo);

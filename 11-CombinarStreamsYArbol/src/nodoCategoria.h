@@ -4,7 +4,6 @@
 #include <string>
 #include <iostream>
 #include <vector>
-
 #include "nodoArticulo.h"
 
 using namespace std;
@@ -15,7 +14,7 @@ class NodoCategoria
     int idCategoria;
     string nombreCategoria;
     int idSuperCategoria;
-    vector <NodoArticulo*> articulos;
+    vector <NodoArticulo*> listaArticulos;
 
     public:
         NodoCategoria();
@@ -27,8 +26,9 @@ class NodoCategoria
         friend istream &operator >> (istream &i, NodoCategoria *nodoCategoria);
         friend ostream &operator << (ostream &o, const NodoCategoria *nodoCategoria);
 
-        //void AgregarArticulo(NodoArticulo *nuevoArticulo);
-        //vector <NodoArticulo*> ObetenerListaArticulos();
+        void AgregarArticulo(NodoArticulo *articuloNuevo);
+        vector <NodoArticulo*> ObetenerListaArticulos();
+        
 };
 
 #endif

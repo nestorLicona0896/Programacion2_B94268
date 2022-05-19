@@ -11,11 +11,10 @@ NodoCategoria::NodoCategoria(int idCategoriaNuevo, string nombreCategoriaNuevo ,
 }
 
 NodoCategoria::~NodoCategoria(){
-    /*for(NodoArticulo *nodo : this->articulos){
+    for(NodoArticulo *nodo : this->listaArticulos){
         delete nodo;
-    }*/
+    }
 }
-
 
 istream& operator >> (istream &i, NodoCategoria *nodoCategoria) {
     i >> nodoCategoria->idCategoria >> nodoCategoria->nombreCategoria >> nodoCategoria->idSuperCategoria;
@@ -26,10 +25,11 @@ ostream& operator << (ostream &o, const NodoCategoria *nodoCategoria) {
     o << nodoCategoria->idCategoria << ", " << nodoCategoria->nombreCategoria << ", " << nodoCategoria->idSuperCategoria;
     return o;
 }
-/*vector <NodoArticulo*> NodoCategoria::ObetenerListaArticulos(){
-    return this->articulos;
+
+vector <NodoArticulo*> NodoCategoria::ObetenerListaArticulos(){
+    return this->listaArticulos;
 }
 
 void NodoCategoria::AgregarArticulo(NodoArticulo *nuevoArticulo){
-    this->articulos.push_back(nuevoArticulo);
-}*/
+    this->listaArticulos.push_back(nuevoArticulo);
+}

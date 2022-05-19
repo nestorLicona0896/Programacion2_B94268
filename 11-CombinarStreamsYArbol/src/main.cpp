@@ -65,27 +65,25 @@ int main () {
         cerr << "Error abriendo archivo articulos.txt" << endl;
         return -1;
     }
-
-    //NodoArticulo *articuloNuevo;
+    
     string linea;
+    int id {0};
+    string nombre {};
+    int idCategoria {0};
     while(getline(archivoArticulos, linea)){
         istringstream streamEntrada(linea);
-        //articuloNuevo = new NodoArticulo();
-        //streamEntrada >> articuloNuevo;
-
+        streamEntrada >> id >> nombre >> idCategoria;  
+        //cout << id << nombre<< idCategoria << endl;
+        catalogo->AgregarArticulo(id, nombre, idCategoria);
     }
 
     cout << "Mi catálogo:\n" << catalogo;
 
-
-
-
     archivoArticulos.close();
     archivoCategorias.close();
 
-    //delete articuloNuevo; 
     delete catalogo;  
-    
+
 
     return 0;
 }

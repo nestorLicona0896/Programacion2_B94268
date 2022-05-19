@@ -19,8 +19,10 @@ void ArbolCatalogo::AgregarCategoria(NodoCategoria *categoriaNueva){
     this->categorias.push_back(categoriaNueva);
 }
 
-void ArbolCatalogo::AgregarArticulo(int idArticuloNuevo, string nombreArticuloNuevo, int idCategoriaArticuloNuevo){
-    
+void ArbolCatalogo::AgregarArticulo(int idArticuloNuevo, string nombreArticuloNuevo, int idCategoriaNuevo){
+    NodoArticulo *articuloNuevo = new NodoArticulo(idArticuloNuevo, nombreArticuloNuevo, idCategoriaNuevo);
+    this->categorias.at(idCategoriaNuevo-1)->AgregarArticulo(articuloNuevo);
+    this->articulosCategorizados.insert(pair<int, NodoArticulo*>(idCategoriaNuevo, articuloNuevo));
 }
 
 istream& operator >> (istream &i, ArbolCatalogo *catalogo) {
@@ -38,8 +40,12 @@ istream& operator >> (istream &i, ArbolCatalogo *catalogo) {
 }
 
 ostream& operator << (ostream &o, const ArbolCatalogo *catalogo){
+    
     for(NodoCategoria *nodoCategoria : catalogo->categorias){
-        o << nodoCategoria << endl;
+        o << "categoria: " << nodoCategoria <<  endl;
+        for(NodoArticulo *nodoArticulo : nodoCategoria->ObetenerListaArticulos()){
+            o << nodoArticulo << endl;
+        }        
     }
     return o;
 }
