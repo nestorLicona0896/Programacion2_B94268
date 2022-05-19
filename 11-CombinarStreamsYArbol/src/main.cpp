@@ -57,11 +57,21 @@ int main () {
     }
 
     archivoCategorias >> catalogo;
-
     cout << "Mi catálogo:\n" << catalogo;
 
-    archivoCategorias.close();
+    ifstream archivoArticulos("articulos.txt", ifstream::in); // Por default abriendo como texto
+    
+    if (!archivoArticulos.is_open())
+    {
+        cerr << "Error abriendo archivo categorias.txt" << endl;
+        return -1;
+    }
 
+    archivoArticulos >> catalogo;
+    cout << "Mi catálogo:\n" << catalogo;
+
+    archivoArticulos.close();
+    archivoCategorias.close();
     delete catalogo;
     
 

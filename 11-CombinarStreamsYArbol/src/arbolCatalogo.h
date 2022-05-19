@@ -2,6 +2,7 @@
 #define ARBOL_CATALOGO_H
 
 #include "nodoCategoria.h"
+#include "nodoArticulo.h"
 #include <vector>
 
 using namespace std;
@@ -20,6 +21,7 @@ class ArbolCatalogo {
         friend istream& operator >> (istream &i, ArbolCatalogo *catalogo);
         friend ostream& operator << (ostream  &o, const ArbolCatalogo *catalogo);
 
+        void AgregarArticulo(NodoArticulo *articuloNuevo);
 };
 
 #endif
