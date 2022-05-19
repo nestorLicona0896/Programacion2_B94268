@@ -1,6 +1,8 @@
 #include "nodoArticulo.h"
 
-NodoArticulo::NodoArticulo(){}
+NodoArticulo::NodoArticulo(){
+
+}
 
 NodoArticulo::NodoArticulo(int idArticuloNuevo, string nombreArticuloNuevo, int idCategoriaNuevo) {
     this->idArticulo = idArticuloNuevo;
@@ -8,7 +10,9 @@ NodoArticulo::NodoArticulo(int idArticuloNuevo, string nombreArticuloNuevo, int 
     this->idCategoria = idCategoriaNuevo;
 }
 
-NodoArticulo::~NodoArticulo(){}
+NodoArticulo::~NodoArticulo(){
+    
+}
 
 istream& operator >> (istream &i, NodoArticulo *nodoArticulo) {
     i >> nodoArticulo->idArticulo >> nodoArticulo->nombreArticulo >> nodoArticulo->idCategoria;

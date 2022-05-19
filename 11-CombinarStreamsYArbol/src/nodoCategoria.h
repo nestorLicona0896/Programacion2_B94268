@@ -3,9 +3,9 @@
 
 #include <string>
 #include <iostream>
-
-#include "nodoArticulo.h"
 #include <vector>
+
+//#include "nodoArticulo.h"
 
 using namespace std;
 
@@ -15,7 +15,7 @@ class NodoCategoria
     int idCategoria;
     string nombreCategoria;
     int idSuperCategoria;
-    vector <NodoArticulo*> articulos;
+    //vector <NodoArticulo*> articulos;
 
     public:
         NodoCategoria();
@@ -24,11 +24,11 @@ class NodoCategoria
 
         // sobrecargas a los operadores para a la hora de añadir una categoria apartir de informacion proveniente de datos stream
         // estea sea tratada como un flujo de datos unitario dentro del NodoCategoria/categoria
-        friend istream &operator>>(istream &i, NodoCategoria *nodoCategoria);
-        friend ostream &operator<<(ostream &o, const NodoCategoria *nodoCategoria);
+        friend istream &operator >> (istream &i, NodoCategoria *nodoCategoria);
+        friend ostream &operator << (ostream &o, const NodoCategoria *nodoCategoria);
 
-        void AgregarArticulo(NodoArticulo *nuevoArticulo);
-        vector <NodoArticulo*> ObetenerListaArticulos();
+        //void AgregarArticulo(NodoArticulo *nuevoArticulo);
+        //vector <NodoArticulo*> ObetenerListaArticulos();
 };
 
 #endif

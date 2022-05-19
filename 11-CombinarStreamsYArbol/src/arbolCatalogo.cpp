@@ -15,8 +15,12 @@ ArbolCatalogo::~ArbolCatalogo(){
     }    
 }
 
-void ArbolCatalogo::AgregarCategoria(NodoCategoria *nuevaCategoria){
-    this->categorias.push_back(nuevaCategoria);
+void ArbolCatalogo::AgregarCategoria(NodoCategoria *categoriaNueva){
+    this->categorias.push_back(categoriaNueva);
+}
+
+void ArbolCatalogo::AgregarArticulo(int idArticuloNuevo, string nombreArticuloNuevo, int idCategoriaArticuloNuevo){
+    
 }
 
 istream& operator >> (istream &i, ArbolCatalogo *catalogo) {

@@ -1,10 +1,9 @@
-
 #include <iostream>
 #include <sstream>
 #include <fstream>
 #include <string>
 
-
+#include "nodoArticulo.h"
 #include "nodoCategoria.h"
 #include "arbolCatalogo.h"
 
@@ -46,6 +45,7 @@ int main () {
     delete catalogo; */
     
     // Ejemplo 3: 
+    
     ArbolCatalogo *catalogo = new ArbolCatalogo();
 
     ifstream archivoCategorias("categorias.txt", ifstream::in); // Por default abriendo como texto
@@ -57,22 +57,34 @@ int main () {
     }
 
     archivoCategorias >> catalogo;
-    cout << "Mi catálogo:\n" << catalogo;
 
     ifstream archivoArticulos("articulos.txt", ifstream::in); // Por default abriendo como texto
     
     if (!archivoArticulos.is_open())
     {
-        cerr << "Error abriendo archivo categorias.txt" << endl;
+        cerr << "Error abriendo archivo articulos.txt" << endl;
         return -1;
     }
 
-    archivoArticulos >> catalogo;
+    //NodoArticulo *articuloNuevo;
+    string linea;
+    while(getline(archivoArticulos, linea)){
+        istringstream streamEntrada(linea);
+        //articuloNuevo = new NodoArticulo();
+        //streamEntrada >> articuloNuevo;
+
+    }
+
     cout << "Mi catálogo:\n" << catalogo;
+
+
+
 
     archivoArticulos.close();
     archivoCategorias.close();
-    delete catalogo;
+
+    //delete articuloNuevo; 
+    delete catalogo;  
     
 
     return 0;

@@ -4,8 +4,9 @@ all:
 	mkdir -p bin
 	g++ $(FLAGS) src/arbolCatalogo.cpp -o bin/arbolCatalogo.o
 	g++ $(FLAGS) src/nodoCategoria.cpp -o bin/nodoCategoria.o
+	g++ $(FLAGS) src/nodoArticulo.cpp -o bin/nodoArticulo.o		
 	g++ $(FLAGS) src/main.cpp -o bin/main.o	
-	g++ -g -o bin/arbolystream bin/arbolCatalogo.o bin/nodoCategoria.o bin/main.o
+	g++ -g -o bin/arbolystream bin/arbolCatalogo.o bin/nodoCategoria.o bin/nodoArticulo.o bin/main.o
 
 test:
 	mkdir -p bin	
